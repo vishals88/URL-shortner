@@ -6,7 +6,7 @@ const { userValidation } = require('../validations/userValidation')
 const validationError = require('../middleware/validationError')
 
 
-router.post('/signup', userValidation, validationError, wrapper(userController.signUp));
+router.post('/signup',validationError, wrapper(userController.signUp));
 
 router.post('/login', validationError, wrapper(userController.logIn));
 
